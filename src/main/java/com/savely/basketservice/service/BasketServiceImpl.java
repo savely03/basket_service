@@ -1,6 +1,6 @@
 package com.savely.basketservice.service;
 
-import com.savely.basketservice.util.Bucket;
+import com.savely.basketservice.util.Basket;
 import org.springframework.stereotype.Service;
 
 import java.util.Collection;
@@ -8,23 +8,23 @@ import java.util.List;
 
 
 @Service
-public class BucketServiceImpl implements BucketService {
-    private final Bucket bucket;
-    public BucketServiceImpl(Bucket basket) {
-        this.bucket = basket;
+public class BasketServiceImpl implements BasketService {
+    private final Basket basket;
+    public BasketServiceImpl(Basket basket) {
+        this.basket = basket;
     }
     @Override
     public void addItem(int id) {
-        bucket.addItem(id);
+        basket.addItem(id);
     }
 
     @Override
     public void addItems(Collection<Integer> items) {
-        bucket.addItems(items);
+        basket.addItems(items);
     }
 
     @Override
     public List<Integer> getItems() {
-        return bucket.getBucketItems();
+        return basket.getBasketItems();
     }
 }

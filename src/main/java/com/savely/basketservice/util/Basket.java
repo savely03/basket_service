@@ -9,19 +9,19 @@ import java.util.List;
 
 @Component
 @SessionScope
-public class Bucket {
-    private final List<Integer> bucketItems;
-    public Bucket() {
-        this.bucketItems = new ArrayList<>();
+public class Basket {
+    private final List<Integer> basketItems;
+    public Basket() {
+        this.basketItems = new ArrayList<>();
     }
-    public List<Integer> getBucketItems() {
-        return Collections.unmodifiableList(bucketItems);
+    public List<Integer> getBasketItems() {
+        return Collections.unmodifiableList(basketItems);
     }
     public void addItem(int item) {
-        bucketItems.add(item);
+        basketItems.add(item);
     }
 
     public void addItems(Collection<Integer> items) {
-        bucketItems.addAll(items);
+        basketItems.addAll(items);
     }
 }

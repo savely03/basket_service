@@ -1,6 +1,6 @@
 package com.savely.basketservice.controller;
 
-import com.savely.basketservice.service.BucketService;
+import com.savely.basketservice.service.BasketService;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.Collection;
@@ -10,9 +10,9 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/order")
-public class BucketController {
-    private final BucketService basketService;
-    public BucketController(BucketService basketService) {
+public class BasketController {
+    private final BasketService basketService;
+    public BasketController(BasketService basketService) {
         this.basketService = basketService;
     }
     @GetMapping("/add/{id}")
